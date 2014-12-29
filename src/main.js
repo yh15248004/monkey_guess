@@ -5,7 +5,7 @@ var RandomNumber = require('./model/random-number');
 var Judgement = require('./model/judgement');
 function guessNumber() {
 
-  console.log(Printer.gameBejin());
+  console.log(Printer.gameBegin());
   var time = 0;
 
   var randomNumbers = RandomNumber.getRandomNumbers();

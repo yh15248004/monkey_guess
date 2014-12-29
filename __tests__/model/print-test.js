@@ -2,11 +2,11 @@ jest.dontMock('../../src/model/print');
 
 describe('Printer', function() {
 
-  describe('.gameBejin()', function() {
+  describe('.gameBegin()', function() {
     it('should return correct gameBejinText', function() {
       var Printer = require('../../src/model/print');
 
-      var result = Printer.gameBejin();
+      var result = Printer.gameBegin();
       expect(result).toBe('please input 4 number betwen 0 and 9:');
     });
   });

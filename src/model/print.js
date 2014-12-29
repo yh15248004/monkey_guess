@@ -1,7 +1,7 @@
 function Printer() {
 }
 
-Printer.gameBejin = function() {
+Printer.gameBegin = function() {
   return 'please input 4 number betwen 0 and 9:';
 };
 
