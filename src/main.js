@@ -10,18 +10,22 @@ function guessNumber() {
   var time = 0;
 
   var randomNumbers = RandomNumber.getRandomNumbers();
-
+  console.log(randomNumbers);
   var rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   });
 
   rl.on('line', function(inputs) {
+
+    var printer = new Printer();
+    if (printer.getInputMessage(_.toArray(inputs)) !== '') {
+      console.log(printer.getInputMessage(_.toArray(inputs)));
+      return;
+    }
     time += 1;
-    console.log(_.intersection(_.toArray(inputs)).length);
     var judgement = new Judgement(randomNumbers, _.toArray(inputs));
     var judgeResult = judgement.getGuessResult();
-    var printer = new Printer();
     if (printer.getGuessResultText(judgeResult, time) === 'congratulations!' || time === 5) {
       console.log(printer.getGuessResultText(judgeResult, time));
       rl.close();
