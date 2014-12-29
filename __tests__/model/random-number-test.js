@@ -9,8 +9,8 @@ describe('RandomNumber', function() {
       var _ = require('lodash');
 
       var randoms = RandomNumber.getRandomNumbers();
-      var diffrentNumber = _.difference(_.range(0, 10), randoms);
-      
+      var diffrentNumber = _.difference(['0','1','2','3','4','5','6','7','8','9'], randoms);
+
       expect(diffrentNumber.length).toBe(6);
       expect(randoms.length).toBe(4);
     });
