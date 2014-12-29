@@ -9,9 +9,9 @@ Printer.gameBegin = function() {
 Printer.prototype.getGuessResultText = function(guessResult, time) {
 
   var guessResultText = '';
-  if (guessResult === '4A0B' && time <= 5) {
+  if (guessResult === '4A0B' && time >= 0) {
     guessResultText = 'congratulations!';
-  } else if (time < 5){
+  } else if (time > 0){
     guessResultText = 'Your answer is:' + guessResult + ',please continute!';
   } else {
     guessResultText = 'GameOver!!!';

@@ -22,7 +22,7 @@ describe('Printer', function() {
 
     it('should return correct text for 4A0B', function() {
 
-      var result = printer.getGuessResultText('4A0B', 5);
+      var result = printer.getGuessResultText('4A0B', 0);
 
       expect(result).toBe('congratulations!');
     });
@@ -36,7 +36,7 @@ describe('Printer', function() {
 
     it('should return correct text for 1A1B', function() {
 
-      var result = printer.getGuessResultText('1A1B', 5);
+      var result = printer.getGuessResultText('1A1B', 0);
 
       expect(result).toBe('GameOver!!!');
     });
