@@ -31,18 +31,5 @@ function guessNumber() {
     }
   });
 
-  // for (var i = 0; i < 6; i++) {
-  //
-  //   var inputNumbers = [];
-  //   var judgement = new Judgement(randomNumbers, inputNumbers);
-  //   var printer = new Printer();
-  //   if (printer.getGuessResultText(judgement, i) === 'congratulations!') {
-  //     process.stdout.write(printer.getGuessResultText(judgement, i));
-  //     break;
-  //   } else {
-  //     process.stdout.write(printer.getGuessResultText(judgement, i));
-  //   }
-  //
-  // }
 }
 guessNumber();
