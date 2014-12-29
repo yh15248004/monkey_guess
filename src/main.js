@@ -9,7 +9,6 @@ function guessNumber() {
   var time = 0;
 
   var randomNumbers = RandomNumber.getRandomNumbers();
-  //console.log(randomNumbers);
 
   var rl = readline.createInterface({
     input: process.stdin,
@@ -32,4 +31,4 @@ function guessNumber() {
 }
 
 guessNumber();
-module.exports = Printer;
+exports.guessNumber = guessNumber;
