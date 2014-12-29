@@ -2,7 +2,7 @@ function Printer() {
 }
 
 Printer.gameBejin = function() {
-  return 'please input 4 number betwen 0 and 9:\n';
+  return 'please input 4 number betwen 0 and 9:';
 };
 
 Printer.prototype.getGuessResultText = function(guessResult, time) {
@@ -15,7 +15,7 @@ Printer.prototype.getGuessResultText = function(guessResult, time) {
   } else {
     guessResultText = 'GameOver!!!';
   }
-  
+
   return guessResultText;
 };
 

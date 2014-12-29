@@ -7,7 +7,7 @@ describe('Printer', function() {
       var Printer = require('../../src/model/print');
 
       var result = Printer.gameBejin();
-      expect(result).toBe('please input 4 number betwen 0 and 9:\n');
+      expect(result).toBe('please input 4 number betwen 0 and 9:');
     });
   });
 

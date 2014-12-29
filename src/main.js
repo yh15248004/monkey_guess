@@ -9,7 +9,7 @@ function guessNumber() {
   var time = 0;
 
   var randomNumbers = RandomNumber.getRandomNumbers();
-  console.log(randomNumbers);
+  //console.log(randomNumbers);
 
   var rl = readline.createInterface({
     input: process.stdin,
@@ -19,9 +19,7 @@ function guessNumber() {
   rl.on('line', function(inputs) {
     time += 1;
     var judgement = new Judgement(randomNumbers, _.toArray(inputs));
-    console.log(_.toArray(inputs) + '-----');
     var judgeResult = judgement.getGuessResult();
-    console.log(judgeResult);
     var printer = new Printer();
     if (printer.getGuessResultText(judgeResult, time) === 'congratulations!' || time === 5) {
       console.log(printer.getGuessResultText(judgeResult, time));
@@ -32,4 +30,6 @@ function guessNumber() {
   });
 
 }
+
 guessNumber();
+module.exports = Printer;
