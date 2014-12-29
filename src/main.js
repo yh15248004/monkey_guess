@@ -3,6 +3,7 @@ var _ = require('lodash');
 var Printer = require('./model/print');
 var RandomNumber = require('./model/random-number');
 var Judgement = require('./model/judgement');
+
 function guessNumber() {
 
   console.log(Printer.gameBegin());
@@ -17,6 +18,7 @@ function guessNumber() {
 
   rl.on('line', function(inputs) {
     time += 1;
+    console.log(_.intersection(_.toArray(inputs)).length);
     var judgement = new Judgement(randomNumbers, _.toArray(inputs));
     var judgeResult = judgement.getGuessResult();
     var printer = new Printer();

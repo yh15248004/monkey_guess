@@ -1,4 +1,5 @@
 jest.dontMock('../../src/model/print');
+jest.dontMock('lodash');
 
 describe('Printer', function() {
   var Printer;
@@ -40,6 +41,24 @@ describe('Printer', function() {
       expect(result).toBe('GameOver!!!');
     });
 
+  });
+
+  describe('#getInputMessage()', function() {
+    it('should return correct message', function() {
+
+      var result = printer.getInputMessage(['3','1','2','5','6']);
+      expect(result).toBe('Please input 4 number without repeat!');
+    });
+
+    it('should return correct message', function() {
+      var result = printer.getInputMessage(['3','1','1','5']);
+      expect(result).toBe('There is repeat in your number!');
+    });
+
+    it('should return correct message', function() {
+      var result = printer.getInputMessage(['3','1','2','5']);
+      expect(result).toBe('');
+    });
 
   });
 
